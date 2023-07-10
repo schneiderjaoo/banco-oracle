@@ -10,3 +10,9 @@ create table funcionarios(
   nomeFuncionario varchar(100) not null,
   salarioFuncionarios float not null 
 );
+
+insert into empresa ( idEmpresa, nomeEmpresa, descricaoEmpresa)
+values ( 1, " Empresa um ", " Empresa número um ");
+
+insert into empresa ( idEmpresa, nomeEmpresa, descricaoEmpresa)
+values ( 2, " Empresa dois ", " Empresa número dois ");
