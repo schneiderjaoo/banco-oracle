@@ -16,3 +16,5 @@ values ( 1, " Empresa um ", " Empresa número um ");
 
 insert into empresa ( idEmpresa, nomeEmpresa, descricaoEmpresa)
 values ( 2, " Empresa dois ", " Empresa número dois ");
+
+select * from empresa a -- seleciona a tabela e mostra todas as empresas, "select * from empresa a where idEmpresa = 1", aqui ele puxa a emrpesa com id = 1--
