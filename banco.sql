@@ -17,6 +17,12 @@ create table produtos(  --criando tabela de produtos--
   descricaoProduto varchar(255)
 );
 
+create table pedidos(
+  idProduto int,
+  idPedido int primary key not null,
+  descricaoPedido varchar(100) not null
+);
+
 insert into empresa ( idEmpresa, nomeEmpresa, descricaoEmpresa)  --criando a empresa número um--
 values ( 1, ' Empresa um ', ' Empresa número um ');
 
@@ -82,3 +88,10 @@ select * from funcionarios a  --(VERIFICAÇÃO SE OS DADOS FORÃO INSERIDOS)Empr
 
 select * from funcionarios a  --(VERIFICAÇÃO SE OS DADOS FORÃO INSERIDOS)Empresa dois--
   where idEmpresa = 2
+
+insert into pedidos ( idProduto, idPedido, descricaoPedido ) --pedido com código de peoduto da empresa um--
+values ( 11, 1, ' 20 camisas ');
+insert into pedidos ( idProduto, idPedido, descricaoPedido ) --pedido com código de peoduto da empresa um--
+values ( 21, 2, ' 10 moletons ');
+
+select * from pedidos a --vendo os pedios de ambas as empresas--
