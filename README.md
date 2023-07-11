@@ -1,2 +1,1 @@
-# banco-oracle
-banco de dados simples, criado no SQL Worksheet
+  Banco de dados com tabelas Empresa, Funcionarios, produtos
