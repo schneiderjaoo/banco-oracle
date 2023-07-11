@@ -11,7 +11,7 @@ create table funcionarios(  --criando tabela funcionarios--
   salarioFuncionarios float not null 
 );
 
-create table produtos(
+create table produtos(  --criando tabela de produtos--
   idEmpresa int not null,
   idProduto int primary key not null,
   descricaoProduto varchar(255)
@@ -58,10 +58,10 @@ values ( 2, 22, ' Verde ');
 select * from produtos a  --(VERIFICAÇÃO SE OS DADOS FORÃO INSERIDOS)puxando dados de produtos da empresa número dois--
   where idEmpresa = 2
 
-ALTER TABLE funcionarios
+ALTER TABLE funcionarios --Adicionando campo novo a tabela dos funcionários, pela nova necessidade--
 ADD idProduto int;
 
-update funcionarios   --Adicionando produto a funcionário destinado--
+update funcionarios   --Adicionando produtos a funcionários destinados--
   set idProduto = 12
   where idFuncionario = 12;
 
