@@ -11,6 +11,12 @@ create table funcionarios(  --criando tabela funcionarios--
   salarioFuncionarios float not null 
 );
 
+create table produtos(
+  idEmpresa int not null,
+  idProduto int primary key not null,
+  descricaoProduto varchar(255)
+);
+
 insert into empresa ( idEmpresa, nomeEmpresa, descricaoEmpresa)  --criando a empresa número um--
 values ( 1, ' Empresa um ', ' Empresa número um ');
 
