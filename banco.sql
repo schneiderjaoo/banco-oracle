@@ -11,7 +11,7 @@ create table funcionarios(  --criando tabela funcionarios--
   salarioFuncionarios float not null 
 );
 
-create table produtos(  --criando tabela de produtos--
+create table processo(  --criando tabela de produtos--
   idEmpresa int not null,
   idProduto int primary key not null,
   descricaoProduto varchar(255)
@@ -89,9 +89,9 @@ select * from funcionarios a  --(VERIFICAÇÃO SE OS DADOS FORÃO INSERIDOS)Empr
 select * from funcionarios a  --(VERIFICAÇÃO SE OS DADOS FORÃO INSERIDOS)Empresa dois--
   where idEmpresa = 2
 
-insert into pedidos ( idProduto, idPedido, descricaoPedido ) --pedido com código de peoduto da empresa um--
+insert into processo ( idProduto, idPedido, descricaoPedido ) --pedido com código de peoduto da empresa um--
 values ( 11, 1, ' 20 camisas ');
 insert into pedidos ( idProduto, idPedido, descricaoPedido ) --pedido com código de peoduto da empresa um--
 values ( 21, 2, ' 10 moletons ');
 
-select * from pedidos a --vendo os pedios de ambas as empresas--
+select * from processo a --vendo os pedios de ambas as empresas--
