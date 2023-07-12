@@ -17,7 +17,7 @@ create table processo(  --criando tabela de produtos--
   descricaoProduto varchar(255)
 );
 
-create table pedidos(
+create table pedidos(  --criação da tabela de processos--
   idProduto int,
   idPedido int primary key not null,
   descricaoPedido varchar(100) not null
