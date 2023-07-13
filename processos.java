@@ -54,10 +54,4 @@ public class Pagamento {
             e.printStackTrace();
         }
     }
-
-    private static float calcularPagamento(float salario) {
-        // Lógica para calcular o valor do pagamento
-        // Exemplo: Pagamento igual ao salário
-        return salario;
-    }
 }
