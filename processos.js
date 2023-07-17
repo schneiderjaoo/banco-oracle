@@ -1,10 +1,10 @@
-const mysql = require('mysql');
+const mysql = require('mysql'); //importando o mysql
 
-const connection = mysql.createConnection({
+const connection = mysql.createConnection({ //estabelecendo uma conexão ao banco
   host: 'localhost',
   user: 'usuario',
   password: 'senha',
-  database: 'banco'
+  database: 'banco.sql'
 });
 
 function calcularPagamento(salario) {
@@ -16,19 +16,19 @@ function calcularPagamento(salario) {
   return valorPagamento;
 }
 
-connection.connect((err) => {
+connection.connect((err) => { //aqui estamos estabelecendo uma conexão ao banco
   if (err) {
     console.error('Erro ao conectar ao banco de dados:', err);
     return;
   }
-
-  const sql = `SELECT p.descricaoPedido, e.nomeEmpresa, f.nomeFuncionario, f.salarioFuncionarios
+//execução do SQL
+  const sql = `SELECT p.descricaoPedido, e.nomeEmpresa, f.nomeFuncionario, f.salarioFuncionarios  
                FROM pedidos p
                JOIN processo pr ON p.idProduto = pr.idProduto
                JOIN empresa e ON pr.idEmpresa = e.idEmpresa
                JOIN funcionarios f ON e.idEmpresa = f.idEmpresa`;
 
-  connection.query(sql, (err, results) => {
+  connection.query(sql, (err, results) => { // utilizando o query para consultar as informações do SQL
     if (err) {
       console.error('Erro ao executar a consulta:', err);
       connection.end();
